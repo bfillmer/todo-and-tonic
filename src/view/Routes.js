@@ -5,7 +5,7 @@ import {NOT_FOUND} from 'redux-first-router'
 
 import {routeType} from 'selectors'
 import {ROUTE_TODOS} from 'types'
-import {Todos} from 'view/Todos'
+import {Todos} from 'view/Todos/Container'
 
 const routesMap = {
   [ROUTE_TODOS]: Todos,
