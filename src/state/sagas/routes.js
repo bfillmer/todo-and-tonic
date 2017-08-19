@@ -1,8 +1,14 @@
 
 import {spawn, takeEvery} from 'redux-saga/effects'
 
+import {ROUTE_TODOS} from 'types'
+
+import {hydrate} from 'state/sagas/todos'
+
 // Routes that require side effects on load are mapped here, [type]: saga.
-const routesMap = {}
+const routesMap = {
+  [ROUTE_TODOS]: hydrate
+}
 
 // Spawn the saga associated with the route type.
 function * handleRouteChange ({type}) {

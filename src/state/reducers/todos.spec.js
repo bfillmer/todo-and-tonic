@@ -1,7 +1,7 @@
 /* global describe, expect, test */
 
-import {ADDED_TODO, REMOVED_TODO, COMPLETED_TODO} from 'types'
-import {addTodo, removeTodo, completeTodo} from 'actions'
+import {ADDED_TODO, REMOVED_TODO, COMPLETED_TODO, HYDRATED_TODOS} from 'types'
+import {addTodo, removeTodo, completeTodo, hydrateTodos} from 'actions'
 
 import {initialState, reducer} from 'state/reducers/todos'
 
@@ -15,14 +15,22 @@ describe('[UNIT] Todo Reducer', () => {
     expect(stateWithSingleTodo).toMatchSnapshot()
     expect(stateWithTwoTodos).toMatchSnapshot()
   })
+
   test(REMOVED_TODO, () => {
     const removeAction = removeTodo(2)
     const stateAfterRemove = reducer(stateWithTwoTodos, removeAction)
     expect(stateAfterRemove).toEqual(stateWithSingleTodo)
   })
+
   test(COMPLETED_TODO, () => {
     const completeAction = completeTodo(1)
     const stateAfterComplete = reducer(stateWithTwoTodos, completeAction)
     expect(stateAfterComplete).toMatchSnapshot()
+  })
+
+  test(HYDRATED_TODOS, () => {
+    const hydrateAction = hydrateTodos(stateWithTwoTodos)
+    const stateAfterHydrate = reducer(initialState, hydrateAction)
+    expect(stateAfterHydrate).toEqual(stateWithTwoTodos)
   })
 })

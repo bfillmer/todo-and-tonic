@@ -1,7 +1,7 @@
 
 import {handleActions} from 'redux-actions'
 
-import {ADDED_TODO, REMOVED_TODO, COMPLETED_TODO, COMPLETED} from 'types'
+import {ADDED_TODO, REMOVED_TODO, COMPLETED_TODO, HYDRATED_TODOS, COMPLETED} from 'types'
 
 const assign = Object.assign
 
@@ -38,8 +38,11 @@ const completeTodo = (state, {payload: id}) => assign({}, state, {
   })
 })
 
+const hydrateTodos = (state, {payload: todos}) => todos
+
 export const reducer = handleActions({
   [ADDED_TODO]: addTodo,
   [REMOVED_TODO]: removeTodo,
-  [COMPLETED_TODO]: completeTodo
+  [COMPLETED_TODO]: completeTodo,
+  [HYDRATED_TODOS]: hydrateTodos
 }, initialState)
