@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[UNIT] Todo Reducer todo/ADDED_TODO 1`] = `
+Object {
+  "allIds": Array [
+    1,
+  ],
+  "byId": Object {
+    "1": Object {
+      "id": 1,
+      "status": "IN_PROGRESS",
+      "text": "A simple todo item.",
+    },
+  },
+}
+`;
+
+exports[`[UNIT] Todo Reducer todo/ADDED_TODO 2`] = `
+Object {
+  "allIds": Array [
+    1,
+    2,
+  ],
+  "byId": Object {
+    "1": Object {
+      "id": 1,
+      "status": "IN_PROGRESS",
+      "text": "A simple todo item.",
+    },
+    "2": Object {
+      "id": 2,
+      "status": "IN_PROGRESS",
+      "text": "Another todo item.",
+    },
+  },
+}
+`;
+
+exports[`[UNIT] Todo Reducer todo/COMPLETED_TODO 1`] = `
+Object {
+  "allIds": Array [
+    1,
+    2,
+  ],
+  "byId": Object {
+    "1": Object {
+      "id": 1,
+      "status": "COMPLETED",
+      "text": "A simple todo item.",
+    },
+    "2": Object {
+      "id": 2,
+      "status": "IN_PROGRESS",
+      "text": "Another todo item.",
+    },
+  },
+}
+`;

@@ -2,27 +2,17 @@
 import {connectRoutes} from 'redux-first-router'
 import createHistory from 'history/createBrowserHistory'
 
-import {ROUTE_HOME, ROUTE_ABOUT} from 'types'
+import {ROUTE_TODOS} from 'types'
 
 const routesMap = {
-  [ROUTE_HOME]: '/',
-  [ROUTE_ABOUT]: '/about'
+  [ROUTE_TODOS]: '/'
 }
 
 const history = createHistory()
 
-const {
+export const {
   reducer,
   middleware,
   enhancer,
   initialDispatch
 } = connectRoutes(history, routesMap)
-
-// @HACK Exporting when assigning the variables above works when the application compiles to run,
-// however Jest chokes on the reducer when running our snapshot tests.
-export {
-  reducer,
-  middleware,
-  enhancer,
-  initialDispatch
-}

@@ -1,9 +1,9 @@
 
-# Playground
+# Todo & Tonic
 
-General React playground for experimenting with new things.
+Traditional todo application in React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and boilerplate ported from [bfillmer/playground](https://github.com/bfillmer/playground).
 
 ## Overview
 

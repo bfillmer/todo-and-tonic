@@ -4,14 +4,12 @@ import {connect} from 'react-redux'
 import {NOT_FOUND} from 'redux-first-router'
 
 import {routeType} from 'selectors'
-import {ROUTE_HOME, ROUTE_ABOUT} from 'types'
-import {About} from 'view/About'
-import {Home} from 'view/Home'
+import {ROUTE_TODOS} from 'types'
+import {Todos} from 'view/Todos'
 
 const routesMap = {
-  [ROUTE_HOME]: Home,
-  [ROUTE_ABOUT]: About,
-  [NOT_FOUND]: Home
+  [ROUTE_TODOS]: Todos,
+  [NOT_FOUND]: Todos
 }
 
 const mapStateToProps = state => ({
