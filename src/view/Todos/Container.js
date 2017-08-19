@@ -7,6 +7,7 @@ import {addTodo, completeTodo, removeTodo} from 'actions'
 
 import {Section} from 'view/Shared/Layout'
 import {AddTodo} from 'view/Todos/AddTodo'
+import {List, Todo} from 'view/Todos/List'
 
 const mapStateToProps = state => ({
   todos: getAllTodos(state)
@@ -19,13 +20,13 @@ const mapDispatchToProps = {
 }
 
 const Container = ({addTodo, completeTodo, removeTodo, todos}) => {
-  const renderTodos = todos.map(t => <li>{t.id} {t.text} {t.status}</li>)
+  const renderTodos = todos.map(t => <Todo key={t.id} {...t} />)
   return (
     <Section>
       <AddTodo addTodo={addTodo} />
-      <ul>
+      <List>
         {renderTodos}
-      </ul>
+      </List>
     </Section>
   )
 }
