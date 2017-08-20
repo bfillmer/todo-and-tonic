@@ -1,7 +1,9 @@
 
 # Todo & Tonic
 
-Traditional todo application in React, persists to localStorage.
+Traditional todo application in React, persists data to localStorage.
+
+Possibly available at https://tonic-voitvspavn.now.sh.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and boilerplate ported from [bfillmer/playground](https://github.com/bfillmer/playground).
 
