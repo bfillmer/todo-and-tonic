@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[SNAP] Todos Container 1`] = `
+<section
+  className="sc-bdVaJa hGVrDW"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="sc-bwzfXH juMeWl"
+      onChange={[Function]}
+      placeholder="I need to..."
+      type="text"
+      value=""
+    />
+  </form>
+  <ul
+    className="sc-ifAKCX cgkBfR"
+  >
+    <li
+      className="sc-EHOje bRpoAK"
+    >
+      <button
+        className="sc-gzVnrw fpSixZ sc-bZQynM kDYktl"
+        onClick={[Function]}
+      >
+        A simple todo item.
+      </button>
+      <button
+        className="sc-bZQynM kDYktl"
+        onClick={[Function]}
+      >
+        <svg
+          className="sc-bxivhb iWLryQ sc-htpNat ldqdhg"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</section>
+`;

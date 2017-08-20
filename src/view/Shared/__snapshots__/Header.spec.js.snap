@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[SNAP] Header 1`] = `
+<header
+  className="sc-htpNat bGitmu"
+>
+  <h1
+    className="sc-bdVaJa ldpKxe"
+  >
+    T&T
+  </h1>
+</header>
+`;

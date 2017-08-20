@@ -19,8 +19,9 @@ const mapDispatchToProps = {
   removeTodo
 }
 
-const Container = ({addTodo, completeTodo, removeTodo, todos}) => {
-  const renderTodos = todos.map(t => <Todo key={t.id} {...t} />)
+export const Container = ({addTodo, completeTodo, removeTodo, todos}) => {
+  const todoActions = {removeTodo, completeTodo}
+  const renderTodos = todos.map(t => <Todo key={t.id} {...t} {...todoActions} />)
   return (
     <Section>
       <AddTodo addTodo={addTodo} />
